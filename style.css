@@ -1,0 +1,133 @@
+.jumbotron {
+    color: #9acfea;
+}
+#div-2 {
+    display: table;
+    margin: 0 auto;
+    color: deepskyblue;
+}
+
+body {
+    background-color: lightyellow;
+}
+
+#sun {
+    position: relative;
+}
+#sun img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/*for the sun flip */
+
+.sun {
+    position:relative;
+    /*  width:300px; */
+    /*  height:200px; */
+    overflow:hidden;
+    float:left;
+    margin-right:20px
+}
+
+.sun figure {
+    margin:0;
+    padding:0;
+    position:relative;
+    cursor:pointer;
+    margin-left:-50px
+}
+.sun figure img {
+    display:block;
+    position:relative;
+    z-index:10;
+    margin:-15px 0
+}
+.sun figure figcaption {
+    display:block;
+    position:absolute;
+    z-index:5;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.sun figure h2 {
+    font-family:'Lato';
+    color:#fff;
+    font-size:20px;
+    text-align:left
+}
+.sun figure p {
+    display:block;
+    font-family:'Lato';
+    font-size:12px;
+    line-height:18px;
+    margin:0;
+    color:#fff;
+    text-align:left
+}
+.sun figure figcaption {
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:29px 44px;
+    background-color:rgba(26,76,110,0.5);
+    text-align:center;
+    backface-visibility:hidden;
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s
+}
+.sun figure img {
+    backface-visibility:hidden;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s
+}
+.sun figure:hover img,figure.hover img {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    transform:rotateY(180deg)
+}
+.sun figure:hover figcaption,figure.hover figcaption {
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    transform:rotateY(0)
+}
+
+/* ufo */
+.container {
+    position:relative;
+    overflow:hidden;
+    width:200px;
+    height:150px;
+}
+.container .textbox {
+    position:absolute;
+    top:0;
+    left:0;
+    width:200px;
+    height:150px;
+    margin-left:-210px;
+}
+.container:hover .textbox {
+    margin-left:0;
+}
+.container img {
+    margin-left:0;
+}
+.container:hover img {
+    margin-left:210px;
+}
+.text {
+    padding-top: 50px;
+}
+.container img, .textbox {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}

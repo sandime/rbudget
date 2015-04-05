@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html ng-app >
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sun's Budgie</title>
+    <script src="budget.js"></script>
+   <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <!--[if lt IE 9]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+
+</head>
+
+<body  ng-controller="budgetController">
+<div>
+    <ul class="sun">
+        <li>
+            <figure>
+                <img src="images/sun.gif" alt="Rhiannon" style="width:304px;height:228px">
+                <figcaption>
+                    <h2>Here comes the sun, doo-do doo-do do</h2>
+                    <p>Sun, sun, sun, here she comes
+                        <br>Sun, sun, sun, here she comes
+                        <br>Sun, sun, sun, here she comes
+                        <br>Sun, sun, sun, here she comes
+                        <br>Sun, sun, sun, here she comes
+                    </p>
+                </figcaption>
+            </figure>
+        </li>
+
+    </ul>
+
+    <div class="container">
+        <img src="images/Alien.jpg" class="ufo" alt="UFO" style="width:304px;height:228px">
+        <div class="textbox">
+            <p class="text">Whoopsies! you can't see us</p>
+        </div>
+    </div>
+</div>
+
+<!--
+<div>
+    <img src="images/Alien.jpg" class="ufo" alt="UFO" style="width:304px;height:228px">
+</div>
+-->
+<!--
+<img src="images/Alien.jpg" alt="UFO" style="width:304px;height:228px">
+<img src="images/moon.gif" alt="moon" style="width:304px;height:228px">
+<img src="images/sun.gif" alt="Rhiannon" style="width:304px;height:228px">
+-->
+
+<!--
+<div id="sun">
+    <img src="images/sun.gif" class="sun" alt="Rhiannon" style="width:304px;height:228px">
+</div> -->
+<!--
+<div class="picColor">
+</div>
+-->
+
+<div class="jumbotron text-center">
+    <h1>Hello, Sun!</h1>
+    <form align="center">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>I AM Your Monthly Budget (BETA 1.0.0)</legend>
+            <h3>Enter your monthly expenses. For things such as clothes, <br>
+                add up what you think you'll spend in a year, divide by 12 and enter that. <br>
+                If you don't have an expense in a certain category, <br>
+                enter 0. This is the beta version.</h3>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="rent">Rent</label>
+                <div class="controls">
+                    <input id="rent" ng-model="rent" type="number" required
+                           placeholder="Rent" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="gas">Gas</label>
+                <div class="controls">
+                    <input id="gas" ng-model="gas" type="number"
+                           placeholder="Making it roll" class="input-xlarge" required>
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="groceries">Groceries</label>
+                <div class="controls">
+                    <input id="groceries" ng-model="groceries" type="number"
+                           placeholder="Groceries" class="input-xlarge" required>
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="cable">Cable</label>
+                <div class="controls">
+                    <input id="cable" ng-model="cable" type="number"
+                           placeholder="Cable" class="input-xlarge" required>
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="clothes">clothes</label>
+                <div class="controls">
+                    <input id="clothes" ng-model="clothes" type="number"
+                           placeholder="things to wear and shoes" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="food">Eating Out</label>
+                <div class="controls">
+                    <input id="food" ng-model="food" type="number"
+                           placeholder="jerk-in-the-box and other eateries" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="utilities">Utilities</label>
+                <div class="controls">
+                    <input id="utilities" ng-model="utilities" type="number"
+                           placeholder="electric, sewer, gas, water, trash" class="input-xlarge" >
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="fun">Fun Stuff</label>
+                <div class="controls">
+                    <input id="fun" ng-model="fun" type="number"
+                           placeholder="mini golf, the park ..." class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="vision">Vision</label>
+                <div class="controls">
+                    <input id="vision" ng-model="vision" type="number"
+                           placeholder="eye exams/contacts" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="healthcare">Healthcare</label>
+                <div class="controls">
+                    <input id="healthcare" ng-model="healthcare" type="number"
+                           placeholder="stuff that has to do with your body" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="autoInsurance">Auto Insurance</label>
+                <div class="controls">
+                    <input id="autoInsurance" ng-model="autoInsurance" type="number"
+                           placeholder="car insurance that is $0 for now" class="input-xlarge" >
+
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="control-group">
+                <label class="control-label" for="misc1">Miscellaneous </label>
+                <div class="controls">
+                    <input id="misc1" ng-model="misc1" type="number"
+                           placeholder="miscellaneous" class="input-xlarge" >
+
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="misc2">Miscellaneous </label>
+                <div class="controls">
+                    <input id="misc2" ng-model="misc2" type="number"
+                           placeholder="miscellaneous" class="input-xlarge" >
+
+                </div>
+            </div>
+
+            <!-- Text input
+            <div class="control-group">
+                <label class="control-label" for="phone">Phone</label>
+                <div class="controls">
+                    <input id="phone" name="phone" type="number" placeholder="phone bill that will someday be $40" class="input-xlarge">
+
+                </div>
+           </div>
+-->
+            <!-- Button
+            <div class="control-group">
+                <label class="control-label" for="budgieButton">Submit</label>
+                <div class="controls">
+                    <button id="budgieButton" name="budgieButton" class="btn btn-primary">Voila!</button>
+                </div>
+            </div>
+            <hr>
+            -->
+
+            <!--end of button -->
+            <hr>
+            <div class="control-group">
+
+                <label><strong>Total Expenses</strong> </label>
+                <input type="number" value="{{totalExpenses()}}"/>
+
+                <label>Income</label>
+                <input type="number" ng-model="income"/>
+
+                <label><b>Surplus or Deficit</b></label>
+                <input type="number" value="{{difference()}}"/>
+                <hr>
+
+                <label><b>Goal to save each month</b></label>
+                <input type="number" value="{{save()}}"/>
+
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+<div id="div-2">
+    <h3>a little music while you budget away...</h3>
+    <audio controls>
+        <source src="video/XFiles.mp4" type="audio/mp4">
+    </audio>
+    <hr>
+</div>
+
+</body>
+
+</html>
