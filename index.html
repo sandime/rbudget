@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html ng-app >
 
 <head lang="en">
@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sun's Budgie</title>
-    <script src="budget.js"></script>
+
    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- none of the bootstrap links are functional at the moment on purpose -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-
-    <!--[if lt IE 9]-->
+        <!--[if lt IE 9]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 
-</head>
+<!--bootstrap -->
+
 
 <body  ng-controller="budgetController">
 <div>
@@ -83,8 +84,8 @@
             <div class="control-group">
                 <label class="control-label" for="rent">Rent</label>
                 <div class="controls">
-                    <input id="rent" ng-model="rent" type="number" required
-                           placeholder="Rent" class="input-xlarge">
+                    <input id="rent" ng-model="rent" type="number"
+                           placeholder="Rent" >
 
                 </div>
             </div>
@@ -94,7 +95,7 @@
                 <label class="control-label" for="gas">Gas</label>
                 <div class="controls">
                     <input id="gas" ng-model="gas" type="number"
-                           placeholder="Making it roll" class="input-xlarge" required>
+                           placeholder="Making it roll">
 
                 </div>
             </div>
@@ -104,7 +105,7 @@
                 <label class="control-label" for="groceries">Groceries</label>
                 <div class="controls">
                     <input id="groceries" ng-model="groceries" type="number"
-                           placeholder="Groceries" class="input-xlarge" required>
+                           placeholder="Groceries">
 
                 </div>
             </div>
@@ -114,7 +115,7 @@
                 <label class="control-label" for="cable">Cable</label>
                 <div class="controls">
                     <input id="cable" ng-model="cable" type="number"
-                           placeholder="Cable" class="input-xlarge" required>
+                           placeholder="Cable">
 
                 </div>
             </div>
@@ -124,7 +125,7 @@
                 <label class="control-label" for="clothes">clothes</label>
                 <div class="controls">
                     <input id="clothes" ng-model="clothes" type="number"
-                           placeholder="things to wear and shoes" class="input-xlarge">
+                           placeholder="things to wear and shoes">
 
                 </div>
             </div>
@@ -134,7 +135,7 @@
                 <label class="control-label" for="food">Eating Out</label>
                 <div class="controls">
                     <input id="food" ng-model="food" type="number"
-                           placeholder="jerk-in-the-box and other eateries" class="input-xlarge">
+                           placeholder="jerk-in-the-box and other eateries">
 
                 </div>
             </div>
@@ -144,7 +145,7 @@
                 <label class="control-label" for="utilities">Utilities</label>
                 <div class="controls">
                     <input id="utilities" ng-model="utilities" type="number"
-                           placeholder="electric, sewer, gas, water, trash" class="input-xlarge" >
+                           placeholder="electric, sewer, gas, water, trash">
 
                 </div>
             </div>
@@ -154,7 +155,7 @@
                 <label class="control-label" for="fun">Fun Stuff</label>
                 <div class="controls">
                     <input id="fun" ng-model="fun" type="number"
-                           placeholder="mini golf, the park ..." class="input-xlarge">
+                           placeholder="mini golf, the park ...">
 
                 </div>
             </div>
@@ -164,7 +165,7 @@
                 <label class="control-label" for="vision">Vision</label>
                 <div class="controls">
                     <input id="vision" ng-model="vision" type="number"
-                           placeholder="eye exams/contacts" class="input-xlarge">
+                           placeholder="eye exams/contacts">
 
                 </div>
             </div>
@@ -174,7 +175,7 @@
                 <label class="control-label" for="healthcare">Healthcare</label>
                 <div class="controls">
                     <input id="healthcare" ng-model="healthcare" type="number"
-                           placeholder="stuff that has to do with your body" class="input-xlarge">
+                           placeholder="stuff that has to do with your body">
 
                 </div>
             </div>
@@ -184,7 +185,7 @@
                 <label class="control-label" for="autoInsurance">Auto Insurance</label>
                 <div class="controls">
                     <input id="autoInsurance" ng-model="autoInsurance" type="number"
-                           placeholder="car insurance that is $0 for now" class="input-xlarge" >
+                           placeholder="car insurance that is $0 for now">
 
                 </div>
             </div>
@@ -194,7 +195,7 @@
                 <label class="control-label" for="misc1">Miscellaneous </label>
                 <div class="controls">
                     <input id="misc1" ng-model="misc1" type="number"
-                           placeholder="miscellaneous" class="input-xlarge" >
+                           placeholder="miscellaneous">
 
                 </div>
             </div>
@@ -203,20 +204,11 @@
                 <label class="control-label" for="misc2">Miscellaneous </label>
                 <div class="controls">
                     <input id="misc2" ng-model="misc2" type="number"
-                           placeholder="miscellaneous" class="input-xlarge" >
+                           placeholder="miscellaneous">
 
                 </div>
             </div>
 
-            <!-- Text input
-            <div class="control-group">
-                <label class="control-label" for="phone">Phone</label>
-                <div class="controls">
-                    <input id="phone" name="phone" type="number" placeholder="phone bill that will someday be $40" class="input-xlarge">
-
-                </div>
-           </div>
--->
             <!-- Button
             <div class="control-group">
                 <label class="control-label" for="budgieButton">Submit</label>
@@ -256,6 +248,9 @@
     </audio>
     <hr>
 </div>
+<script src="budget.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 </body>
 
